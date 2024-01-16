@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React 组件库搭建 | Swell</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="shortcut con" type="image/x-icon" href="/favicon.ico">
+    <meta name="description" content="2021, 学习进步!">
+    
+    <link rel="preload" href="/assets/css/0.styles.0d501c6c.css" as="style"><link rel="preload" href="/assets/js/app.9ae398c0.js" as="script"><link rel="preload" href="/assets/js/2.572ab5ff.js" as="script"><link rel="preload" href="/assets/js/317.75781946.js" as="script"><link rel="prefetch" href="/assets/js/10.89392263.js"><link rel="prefetch" href="/assets/js/100.998e6561.js"><link rel="prefetch" href="/assets/js/101.35a6b3b0.js"><link rel="prefetch" href="/assets/js/102.c1f8cc84.js"><link rel="prefetch" href="/assets/js/103.8b2241ec.js"><link rel="prefetch" href="/assets/js/104.8539a155.js"><link rel="prefetch" href="/assets/js/105.f5ee25e1.js"><link rel="prefetch" href="/assets/js/106.a701beae.js"><link rel="prefetch" href="/assets/js/107.b328f659.js"><link rel="prefetch" href="/assets/js/108.7f7e1abd.js"><link rel="prefetch" href="/assets/js/109.98b7fc13.js"><link rel="prefetch" href="/assets/js/11.18ce4503.js"><link rel="prefetch" href="/assets/js/110.8f85c498.js"><link rel="prefetch" href="/assets/js/111.aa1e4f1c.js"><link rel="prefetch" href="/assets/js/112.59b32715.js"><link rel="prefetch" href="/assets/js/113.c4bb924c.js"><link rel="prefetch" href="/assets/js/114.f594f1d0.js"><link rel="prefetch" href="/assets/js/115.fca4db2c.js"><link rel="prefetch" href="/assets/js/116.8b3d6648.js"><link rel="prefetch" href="/assets/js/117.9a3c616d.js"><link rel="prefetch" href="/assets/js/118.0c359003.js"><link rel="prefetch" href="/assets/js/119.141488c6.js"><link rel="prefetch" href="/assets/js/12.da9b7bab.js"><link rel="prefetch" href="/assets/js/120.efe0075f.js"><link rel="prefetch" href="/assets/js/121.3567c4c5.js"><link rel="prefetch" href="/assets/js/122.8725c6d3.js"><link rel="prefetch" href="/assets/js/123.6b6c5c4c.js"><link rel="prefetch" href="/assets/js/124.072b3d73.js"><link rel="prefetch" href="/assets/js/125.29876d10.js"><link rel="prefetch" href="/assets/js/126.83bd34f0.js"><link rel="prefetch" href="/assets/js/127.6e19a76e.js"><link rel="prefetch" href="/assets/js/128.70bd3ab2.js"><link rel="prefetch" href="/assets/js/129.09e68980.js"><link rel="prefetch" href="/assets/js/13.0bcac0a6.js"><link rel="prefetch" href="/assets/js/130.db5f4c56.js"><link rel="prefetch" href="/assets/js/131.801091ad.js"><link rel="prefetch" href="/assets/js/132.10531b9e.js"><link rel="prefetch" href="/assets/js/133.62ed2ab8.js"><link rel="prefetch" href="/assets/js/134.33ec1f63.js"><link rel="prefetch" href="/assets/js/135.8fba58be.js"><link rel="prefetch" href="/assets/js/136.c77444de.js"><link rel="prefetch" href="/assets/js/137.2e606809.js"><link rel="prefetch" href="/assets/js/138.799613cd.js"><link rel="prefetch" href="/assets/js/139.19a794c7.js"><link rel="prefetch" href="/assets/js/14.0d57f038.js"><link rel="prefetch" href="/assets/js/140.f19ff76f.js"><link rel="prefetch" href="/assets/js/141.cc811ca2.js"><link rel="prefetch" href="/assets/js/142.31107ba3.js"><link rel="prefetch" href="/assets/js/143.6b667c9f.js"><link rel="prefetch" href="/assets/js/144.f387f548.js"><link rel="prefetch" href="/assets/js/145.764a080c.js"><link rel="prefetch" href="/assets/js/146.cf77dcba.js"><link rel="prefetch" href="/assets/js/147.3c272c7d.js"><link rel="prefetch" href="/assets/js/148.74b24be3.js"><link rel="prefetch" href="/assets/js/149.2d5882f0.js"><link rel="prefetch" href="/assets/js/15.907f5ea0.js"><link rel="prefetch" href="/assets/js/150.4d8f999b.js"><link rel="prefetch" href="/assets/js/151.8004a35f.js"><link rel="prefetch" href="/assets/js/152.153969dd.js"><link rel="prefetch" href="/assets/js/153.ee9648ae.js"><link rel="prefetch" href="/assets/js/154.c7152085.js"><link rel="prefetch" href="/assets/js/155.683a3215.js"><link rel="prefetch" href="/assets/js/156.2acc5b62.js"><link rel="prefetch" href="/assets/js/157.987a70a7.js"><link rel="prefetch" href="/assets/js/158.825cac65.js"><link rel="prefetch" href="/assets/js/159.45de35cc.js"><link rel="prefetch" href="/assets/js/16.44990bcb.js"><link rel="prefetch" href="/assets/js/160.7c6b1d4c.js"><link rel="prefetch" href="/assets/js/161.842181ba.js"><link rel="prefetch" href="/assets/js/162.9723e026.js"><link rel="prefetch" href="/assets/js/163.aa8d96fb.js"><link rel="prefetch" href="/assets/js/164.88e3d4c0.js"><link rel="prefetch" href="/assets/js/165.837103f0.js"><link rel="prefetch" href="/assets/js/166.eb802175.js"><link rel="prefetch" href="/assets/js/167.c53b5e16.js"><link rel="prefetch" href="/assets/js/168.5863bbcf.js"><link rel="prefetch" href="/assets/js/169.e4a04712.js"><link rel="prefetch" href="/assets/js/17.399a967a.js"><link rel="prefetch" href="/assets/js/170.29c454db.js"><link rel="prefetch" href="/assets/js/171.85b62b9c.js"><link rel="prefetch" href="/assets/js/172.934e8b2c.js"><link rel="prefetch" href="/assets/js/173.3cc6b521.js"><link rel="prefetch" href="/assets/js/174.66759b58.js"><link rel="prefetch" href="/assets/js/175.b2348c65.js"><link rel="prefetch" href="/assets/js/176.289fdf84.js"><link rel="prefetch" href="/assets/js/177.1c754cd5.js"><link rel="prefetch" href="/assets/js/178.b2fa58b6.js"><link rel="prefetch" href="/assets/js/179.7a7c222b.js"><link rel="prefetch" href="/assets/js/18.891097a2.js"><link rel="prefetch" href="/assets/js/180.6fd39865.js"><link rel="prefetch" href="/assets/js/181.8f9f8cd0.js"><link rel="prefetch" href="/assets/js/182.55aebd9a.js"><link rel="prefetch" href="/assets/js/183.665583fa.js"><link rel="prefetch" href="/assets/js/184.76389803.js"><link rel="prefetch" href="/assets/js/185.7dbce2cc.js"><link rel="prefetch" href="/assets/js/186.1e6d2d0d.js"><link rel="prefetch" href="/assets/js/187.f3e1e518.js"><link rel="prefetch" href="/assets/js/188.236c4385.js"><link rel="prefetch" href="/assets/js/189.803156da.js"><link rel="prefetch" href="/assets/js/19.4ebfe2fa.js"><link rel="prefetch" href="/assets/js/190.6a1fd16f.js"><link rel="prefetch" href="/assets/js/191.fc1ef819.js"><link rel="prefetch" href="/assets/js/192.c853053e.js"><link rel="prefetch" href="/assets/js/193.cda1d1ac.js"><link rel="prefetch" href="/assets/js/194.88295a36.js"><link rel="prefetch" href="/assets/js/195.6c0d5758.js"><link rel="prefetch" href="/assets/js/196.ee96085f.js"><link rel="prefetch" href="/assets/js/197.776d3ce5.js"><link rel="prefetch" href="/assets/js/198.beb37ef1.js"><link rel="prefetch" href="/assets/js/199.0064560e.js"><link rel="prefetch" href="/assets/js/20.1ff8e72f.js"><link rel="prefetch" href="/assets/js/200.dbc4e665.js"><link rel="prefetch" href="/assets/js/201.7d413fe9.js"><link rel="prefetch" href="/assets/js/202.c5da5c2a.js"><link rel="prefetch" href="/assets/js/203.9c75cfc3.js"><link rel="prefetch" href="/assets/js/204.68e4dd9a.js"><link rel="prefetch" href="/assets/js/205.8b6f8fb1.js"><link rel="prefetch" href="/assets/js/206.02ccd1bc.js"><link rel="prefetch" href="/assets/js/207.05f71ec8.js"><link rel="prefetch" href="/assets/js/208.61b85107.js"><link rel="prefetch" href="/assets/js/209.836588c7.js"><link rel="prefetch" href="/assets/js/21.0b667dad.js"><link rel="prefetch" href="/assets/js/210.cf8078ea.js"><link rel="prefetch" href="/assets/js/211.e892e85c.js"><link rel="prefetch" href="/assets/js/212.a8d344af.js"><link rel="prefetch" href="/assets/js/213.11737fe4.js"><link rel="prefetch" href="/assets/js/214.ff0e8583.js"><link rel="prefetch" href="/assets/js/215.59e22ef6.js"><link rel="prefetch" href="/assets/js/216.9e45eec4.js"><link rel="prefetch" href="/assets/js/217.49696184.js"><link rel="prefetch" href="/assets/js/218.e1c6c8db.js"><link rel="prefetch" href="/assets/js/219.95307542.js"><link rel="prefetch" href="/assets/js/22.6355c7ca.js"><link rel="prefetch" href="/assets/js/220.9e6cc86a.js"><link rel="prefetch" href="/assets/js/221.963b1c9f.js"><link rel="prefetch" href="/assets/js/222.7cc8f8f5.js"><link rel="prefetch" href="/assets/js/223.fbad5b82.js"><link rel="prefetch" href="/assets/js/224.727c3855.js"><link rel="prefetch" href="/assets/js/225.087f2357.js"><link rel="prefetch" href="/assets/js/226.7930aa09.js"><link rel="prefetch" href="/assets/js/227.7fd38f39.js"><link rel="prefetch" href="/assets/js/228.fb05d80c.js"><link rel="prefetch" href="/assets/js/229.d4dc9f75.js"><link rel="prefetch" href="/assets/js/23.b447d9b1.js"><link rel="prefetch" href="/assets/js/230.38effdab.js"><link rel="prefetch" href="/assets/js/231.0d71dfcd.js"><link rel="prefetch" href="/assets/js/232.528bef18.js"><link rel="prefetch" href="/assets/js/233.dc0c5a86.js"><link rel="prefetch" href="/assets/js/234.23e413b1.js"><link rel="prefetch" href="/assets/js/235.810d231b.js"><link rel="prefetch" href="/assets/js/236.7f5d5c9e.js"><link rel="prefetch" href="/assets/js/237.c28490a7.js"><link rel="prefetch" href="/assets/js/238.a9d5901e.js"><link rel="prefetch" href="/assets/js/239.d7d0aa76.js"><link rel="prefetch" href="/assets/js/24.1d7f3ccc.js"><link rel="prefetch" href="/assets/js/240.61089e0b.js"><link rel="prefetch" href="/assets/js/241.25067360.js"><link rel="prefetch" href="/assets/js/242.cafbe0e5.js"><link rel="prefetch" href="/assets/js/243.ebd857aa.js"><link rel="prefetch" href="/assets/js/244.93e7107f.js"><link rel="prefetch" href="/assets/js/245.dabefed0.js"><link rel="prefetch" href="/assets/js/246.b68a876b.js"><link rel="prefetch" href="/assets/js/247.34b6a4fc.js"><link rel="prefetch" href="/assets/js/248.a8aacbed.js"><link rel="prefetch" href="/assets/js/249.53f648e7.js"><link rel="prefetch" href="/assets/js/25.6696b063.js"><link rel="prefetch" href="/assets/js/250.9d585cec.js"><link rel="prefetch" href="/assets/js/251.d7dad8a2.js"><link rel="prefetch" href="/assets/js/252.53ab7787.js"><link rel="prefetch" href="/assets/js/253.2ab8ded9.js"><link rel="prefetch" href="/assets/js/254.51a3f708.js"><link rel="prefetch" href="/assets/js/255.34e61de7.js"><link rel="prefetch" href="/assets/js/256.c6af6d45.js"><link rel="prefetch" href="/assets/js/257.a3049d04.js"><link rel="prefetch" href="/assets/js/258.e5bce653.js"><link rel="prefetch" href="/assets/js/259.501cf3c7.js"><link rel="prefetch" href="/assets/js/26.c45fd945.js"><link rel="prefetch" href="/assets/js/260.5e1e750e.js"><link rel="prefetch" href="/assets/js/261.3da62246.js"><link rel="prefetch" href="/assets/js/262.5fa87c93.js"><link rel="prefetch" href="/assets/js/263.95abee1e.js"><link rel="prefetch" href="/assets/js/264.c3b512da.js"><link rel="prefetch" href="/assets/js/265.d5cb503d.js"><link rel="prefetch" href="/assets/js/266.a42dc143.js"><link rel="prefetch" href="/assets/js/267.67acf7f9.js"><link rel="prefetch" href="/assets/js/268.d3bd37b7.js"><link rel="prefetch" href="/assets/js/269.cb29220c.js"><link rel="prefetch" href="/assets/js/27.2a574be9.js"><link rel="prefetch" href="/assets/js/270.1b645091.js"><link rel="prefetch" href="/assets/js/271.4d49bcb9.js"><link rel="prefetch" href="/assets/js/272.a0f90cee.js"><link rel="prefetch" href="/assets/js/273.3d4c4e1a.js"><link rel="prefetch" href="/assets/js/274.583c7095.js"><link rel="prefetch" href="/assets/js/275.1fc337a2.js"><link rel="prefetch" href="/assets/js/276.c2d24286.js"><link rel="prefetch" href="/assets/js/277.055b9ed0.js"><link rel="prefetch" href="/assets/js/278.c15747a8.js"><link rel="prefetch" href="/assets/js/279.fbd7a3ea.js"><link rel="prefetch" href="/assets/js/28.fbe4b112.js"><link rel="prefetch" href="/assets/js/280.e2b49b70.js"><link rel="prefetch" href="/assets/js/281.2da2a95a.js"><link rel="prefetch" href="/assets/js/282.8df5aca0.js"><link rel="prefetch" href="/assets/js/283.f212016d.js"><link rel="prefetch" href="/assets/js/284.228ee3a4.js"><link rel="prefetch" href="/assets/js/285.20638009.js"><link rel="prefetch" href="/assets/js/286.49356091.js"><link rel="prefetch" href="/assets/js/287.e301f335.js"><link rel="prefetch" href="/assets/js/288.860373a4.js"><link rel="prefetch" href="/assets/js/289.1065e8ac.js"><link rel="prefetch" href="/assets/js/29.26ee1b72.js"><link rel="prefetch" href="/assets/js/290.0cc1e717.js"><link rel="prefetch" href="/assets/js/291.bdac8ba1.js"><link rel="prefetch" href="/assets/js/292.1a8bcb3d.js"><link rel="prefetch" href="/assets/js/293.7a0fbffb.js"><link rel="prefetch" href="/assets/js/294.f6b57cc0.js"><link rel="prefetch" href="/assets/js/295.2cb2aa2f.js"><link rel="prefetch" href="/assets/js/296.5f5ec3c6.js"><link rel="prefetch" href="/assets/js/297.3c0b21f1.js"><link rel="prefetch" href="/assets/js/298.74ecc5a4.js"><link rel="prefetch" href="/assets/js/299.0d68096e.js"><link rel="prefetch" href="/assets/js/3.dabf1b70.js"><link rel="prefetch" href="/assets/js/30.c042ab36.js"><link rel="prefetch" href="/assets/js/300.51c31261.js"><link rel="prefetch" href="/assets/js/301.c76a93fb.js"><link rel="prefetch" href="/assets/js/302.5b49c9dc.js"><link rel="prefetch" href="/assets/js/303.e0fec117.js"><link rel="prefetch" href="/assets/js/304.220c2748.js"><link rel="prefetch" href="/assets/js/305.d8af8968.js"><link rel="prefetch" href="/assets/js/306.058eea04.js"><link rel="prefetch" href="/assets/js/307.1039ca2f.js"><link rel="prefetch" href="/assets/js/308.907f66fe.js"><link rel="prefetch" href="/assets/js/309.4bb6da73.js"><link rel="prefetch" href="/assets/js/31.c19fb74c.js"><link rel="prefetch" href="/assets/js/310.007df909.js"><link rel="prefetch" href="/assets/js/311.737ee039.js"><link rel="prefetch" href="/assets/js/312.1d34a298.js"><link rel="prefetch" href="/assets/js/313.d1ba78ef.js"><link rel="prefetch" href="/assets/js/314.cb925ffd.js"><link rel="prefetch" href="/assets/js/315.bc8be802.js"><link rel="prefetch" href="/assets/js/316.f845055e.js"><link rel="prefetch" href="/assets/js/318.380a956a.js"><link rel="prefetch" href="/assets/js/319.9179be26.js"><link rel="prefetch" href="/assets/js/32.3ca2f5cf.js"><link rel="prefetch" href="/assets/js/320.cf5223b9.js"><link rel="prefetch" href="/assets/js/321.f67cbc08.js"><link rel="prefetch" href="/assets/js/322.7102c83a.js"><link rel="prefetch" href="/assets/js/323.cae87331.js"><link rel="prefetch" href="/assets/js/324.8250b378.js"><link rel="prefetch" href="/assets/js/325.1e23db79.js"><link rel="prefetch" href="/assets/js/326.ae8136d1.js"><link rel="prefetch" href="/assets/js/327.f06c407b.js"><link rel="prefetch" href="/assets/js/328.a909ab43.js"><link rel="prefetch" href="/assets/js/329.06def1f8.js"><link rel="prefetch" href="/assets/js/33.d534c620.js"><link rel="prefetch" href="/assets/js/330.0afbf584.js"><link rel="prefetch" href="/assets/js/331.de86ceae.js"><link rel="prefetch" href="/assets/js/332.33f9953b.js"><link rel="prefetch" href="/assets/js/333.db9b00fe.js"><link rel="prefetch" href="/assets/js/334.81c6f4e5.js"><link rel="prefetch" href="/assets/js/335.911a063b.js"><link rel="prefetch" href="/assets/js/336.e0260923.js"><link rel="prefetch" href="/assets/js/337.fd3a5b22.js"><link rel="prefetch" href="/assets/js/338.88c95157.js"><link rel="prefetch" href="/assets/js/339.36b7572a.js"><link rel="prefetch" href="/assets/js/34.afd11046.js"><link rel="prefetch" href="/assets/js/340.9d026302.js"><link rel="prefetch" href="/assets/js/341.03a6d7a9.js"><link rel="prefetch" href="/assets/js/342.923b8240.js"><link rel="prefetch" href="/assets/js/343.3b90e269.js"><link rel="prefetch" href="/assets/js/344.74468953.js"><link rel="prefetch" href="/assets/js/345.36452c01.js"><link rel="prefetch" href="/assets/js/346.6c90f0ac.js"><link rel="prefetch" href="/assets/js/347.a4d4073f.js"><link rel="prefetch" href="/assets/js/348.74408bdd.js"><link rel="prefetch" href="/assets/js/349.c96508fc.js"><link rel="prefetch" href="/assets/js/35.cdefdc81.js"><link rel="prefetch" href="/assets/js/350.d84687a4.js"><link rel="prefetch" href="/assets/js/351.198de3df.js"><link rel="prefetch" href="/assets/js/352.9ed7fbdf.js"><link rel="prefetch" href="/assets/js/353.4c13f753.js"><link rel="prefetch" href="/assets/js/354.4c0459f6.js"><link rel="prefetch" href="/assets/js/355.023e23ab.js"><link rel="prefetch" href="/assets/js/356.d6374ab1.js"><link rel="prefetch" href="/assets/js/357.6c4b4312.js"><link rel="prefetch" href="/assets/js/358.eee3d04d.js"><link rel="prefetch" href="/assets/js/359.44efcc70.js"><link rel="prefetch" href="/assets/js/36.804a356c.js"><link rel="prefetch" href="/assets/js/360.84f61f8a.js"><link rel="prefetch" href="/assets/js/361.c545ea05.js"><link rel="prefetch" href="/assets/js/362.16620eea.js"><link rel="prefetch" href="/assets/js/363.c789fa57.js"><link rel="prefetch" href="/assets/js/364.44a493da.js"><link rel="prefetch" href="/assets/js/365.87a1d8ad.js"><link rel="prefetch" href="/assets/js/366.90f1566b.js"><link rel="prefetch" href="/assets/js/367.2024e2f4.js"><link rel="prefetch" href="/assets/js/368.91a73d27.js"><link rel="prefetch" href="/assets/js/369.4c59c3fc.js"><link rel="prefetch" href="/assets/js/37.055bfacb.js"><link rel="prefetch" href="/assets/js/370.40a8fb48.js"><link rel="prefetch" href="/assets/js/371.7d87b623.js"><link rel="prefetch" href="/assets/js/372.6aec9ede.js"><link rel="prefetch" href="/assets/js/373.eb44ffad.js"><link rel="prefetch" href="/assets/js/374.21750996.js"><link rel="prefetch" href="/assets/js/375.a6d8a5ff.js"><link rel="prefetch" href="/assets/js/376.e416c923.js"><link rel="prefetch" href="/assets/js/377.8fc18680.js"><link rel="prefetch" href="/assets/js/378.415afbb9.js"><link rel="prefetch" href="/assets/js/379.fedd3c87.js"><link rel="prefetch" href="/assets/js/38.3d5b0fa5.js"><link rel="prefetch" href="/assets/js/39.db88b6f1.js"><link rel="prefetch" href="/assets/js/4.babb5312.js"><link rel="prefetch" href="/assets/js/40.13b5aa93.js"><link rel="prefetch" href="/assets/js/41.c2373228.js"><link rel="prefetch" href="/assets/js/42.b7652bd6.js"><link rel="prefetch" href="/assets/js/43.1beadeee.js"><link rel="prefetch" href="/assets/js/44.d6be9534.js"><link rel="prefetch" href="/assets/js/45.3ea9fa20.js"><link rel="prefetch" href="/assets/js/46.3f2a1a8f.js"><link rel="prefetch" href="/assets/js/47.bd69463c.js"><link rel="prefetch" href="/assets/js/48.41bf9f0b.js"><link rel="prefetch" href="/assets/js/49.975eb3d7.js"><link rel="prefetch" href="/assets/js/5.b18fd190.js"><link rel="prefetch" href="/assets/js/50.93106dfe.js"><link rel="prefetch" href="/assets/js/51.35dbd274.js"><link rel="prefetch" href="/assets/js/52.babafbe1.js"><link rel="prefetch" href="/assets/js/53.11f46429.js"><link rel="prefetch" href="/assets/js/54.dece368b.js"><link rel="prefetch" href="/assets/js/55.26d3d157.js"><link rel="prefetch" href="/assets/js/56.1a3b6557.js"><link rel="prefetch" href="/assets/js/57.f52a4f1c.js"><link rel="prefetch" href="/assets/js/58.b2cbee78.js"><link rel="prefetch" href="/assets/js/59.c41c4f06.js"><link rel="prefetch" href="/assets/js/6.71659cc6.js"><link rel="prefetch" href="/assets/js/60.203cbdb0.js"><link rel="prefetch" href="/assets/js/61.94a02540.js"><link rel="prefetch" href="/assets/js/62.98c57d32.js"><link rel="prefetch" href="/assets/js/63.e5b1bd86.js"><link rel="prefetch" href="/assets/js/64.6651e65e.js"><link rel="prefetch" href="/assets/js/65.81365110.js"><link rel="prefetch" href="/assets/js/66.516c6447.js"><link rel="prefetch" href="/assets/js/67.8f321d2f.js"><link rel="prefetch" href="/assets/js/68.db7dfa7a.js"><link rel="prefetch" href="/assets/js/69.d2710aae.js"><link rel="prefetch" href="/assets/js/7.b6d57956.js"><link rel="prefetch" href="/assets/js/70.1ab85678.js"><link rel="prefetch" href="/assets/js/71.84dc6bd2.js"><link rel="prefetch" href="/assets/js/72.59c25564.js"><link rel="prefetch" href="/assets/js/73.f3d3d29d.js"><link rel="prefetch" href="/assets/js/74.438afa6b.js"><link rel="prefetch" href="/assets/js/75.01d9a7d1.js"><link rel="prefetch" href="/assets/js/76.8e18deb2.js"><link rel="prefetch" href="/assets/js/77.04576ac6.js"><link rel="prefetch" href="/assets/js/78.e3249f30.js"><link rel="prefetch" href="/assets/js/79.545fe138.js"><link rel="prefetch" href="/assets/js/8.44eacf4e.js"><link rel="prefetch" href="/assets/js/80.ea36298e.js"><link rel="prefetch" href="/assets/js/81.87e1474d.js"><link rel="prefetch" href="/assets/js/82.f8289227.js"><link rel="prefetch" href="/assets/js/83.ceb0e398.js"><link rel="prefetch" href="/assets/js/84.e4372490.js"><link rel="prefetch" href="/assets/js/85.f6fb46cf.js"><link rel="prefetch" href="/assets/js/86.94785ab6.js"><link rel="prefetch" href="/assets/js/87.5ab9518b.js"><link rel="prefetch" href="/assets/js/88.679372e5.js"><link rel="prefetch" href="/assets/js/89.109a6669.js"><link rel="prefetch" href="/assets/js/9.f2f49f4c.js"><link rel="prefetch" href="/assets/js/90.285b97ec.js"><link rel="prefetch" href="/assets/js/91.6ccec18b.js"><link rel="prefetch" href="/assets/js/92.e5832611.js"><link rel="prefetch" href="/assets/js/93.6b9afb9f.js"><link rel="prefetch" href="/assets/js/94.aa545fea.js"><link rel="prefetch" href="/assets/js/95.8431b204.js"><link rel="prefetch" href="/assets/js/96.45da7e56.js"><link rel="prefetch" href="/assets/js/97.1b89dc59.js"><link rel="prefetch" href="/assets/js/98.6a4edfc9.js"><link rel="prefetch" href="/assets/js/99.e43fe3c7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0d501c6c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Swell</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/React/" class="nav-link router-link-active">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/ReactSourceCode/" class="nav-link">
+  React源码
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Regex/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Eslint/" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Component/" class="nav-link">
+  组件封装
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Performance/" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Utils/" class="nav-link">
+  常用工具
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/CaseQuestions/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Test/" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Monitor/" class="nav-link">
+  前端监控
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/MicroFrontEnd/" class="nav-link">
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/LowCode/" class="nav-link">
+  低代码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="转载文章" class="dropdown-title"><span class="title">转载文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="转载文章" class="mobile-dropdown-title"><span class="title">转载文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Transshipment/FrontEnd/" class="nav-link">
+  前端
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="业务" class="dropdown-title"><span class="title">业务</span> <span class="arrow down"></span></button> <button type="button" aria-label="业务" class="mobile-dropdown-title"><span class="title">业务</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Business/XIXIMA/" class="nav-link">
+  XIXIMA
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="代码管理" class="dropdown-title"><span class="title">代码管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="代码管理" class="mobile-dropdown-title"><span class="title">代码管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/CodeManage/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/Lerna/" class="nav-link">
+  Lerna
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/GitHub/" class="nav-link">
+  GitHub
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Tools/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/notes/Tools/Vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-item"><!----> <a href="/notes/Tools/Editor/" class="nav-link">
+  Editor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Algorithm/LeetCode/" class="nav-link">
+  LeetCode
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Databases/MySql/" class="nav-link">
+  MySql
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/18355166248" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Node/" class="nav-link">
+  Node
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/TypeScript/" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/React/" class="nav-link router-link-active">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/ReactSourceCode/" class="nav-link">
+  React源码
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Regex/" class="nav-link">
+  正则表达式
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Eslint/" class="nav-link">
+  Eslint
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Component/" class="nav-link">
+  组件封装
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Performance/" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Utils/" class="nav-link">
+  常用工具
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/CaseQuestions/" class="nav-link">
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Test/" class="nav-link">
+  单元测试
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Monitor/" class="nav-link">
+  前端监控
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/Babel/" class="nav-link">
+  Babel
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/MicroFrontEnd/" class="nav-link">
+  微前端
+</a></li><li class="dropdown-item"><!----> <a href="/notes/ForentEnd/LowCode/" class="nav-link">
+  低代码
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="转载文章" class="dropdown-title"><span class="title">转载文章</span> <span class="arrow down"></span></button> <button type="button" aria-label="转载文章" class="mobile-dropdown-title"><span class="title">转载文章</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Transshipment/FrontEnd/" class="nav-link">
+  前端
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="业务" class="dropdown-title"><span class="title">业务</span> <span class="arrow down"></span></button> <button type="button" aria-label="业务" class="mobile-dropdown-title"><span class="title">业务</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Business/XIXIMA/" class="nav-link">
+  XIXIMA
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="代码管理" class="dropdown-title"><span class="title">代码管理</span> <span class="arrow down"></span></button> <button type="button" aria-label="代码管理" class="mobile-dropdown-title"><span class="title">代码管理</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/CodeManage/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/Lerna/" class="nav-link">
+  Lerna
+</a></li><li class="dropdown-item"><!----> <a href="/notes/CodeManage/GitHub/" class="nav-link">
+  GitHub
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Tools/Jenkins/" class="nav-link">
+  Jenkins
+</a></li><li class="dropdown-item"><!----> <a href="/notes/Tools/Vscode/" class="nav-link">
+  VsCode
+</a></li><li class="dropdown-item"><!----> <a href="/notes/Tools/Editor/" class="nav-link">
+  Editor
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Algorithm/LeetCode/" class="nav-link">
+  LeetCode
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/notes/Databases/MySql/" class="nav-link">
+  MySql
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/18355166248" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/notes/ForentEnd/React/" aria-current="page" class="sidebar-link">React 知识点记录</a></li><li><a href="/notes/ForentEnd/React/AntdTheme.html" class="sidebar-link">改变 antd 主题色(旧)</a></li><li><a href="/notes/ForentEnd/React/Design.html" aria-current="page" class="active sidebar-link">React 组件库搭建</a></li><li><a href="/notes/ForentEnd/React/Fiber.html" class="sidebar-link">完全理解 Fiber</a></li><li><a href="/notes/ForentEnd/React/Hook.html" class="sidebar-link">使用 React Hook 编写函数组件</a></li><li><a href="/notes/ForentEnd/React/NewAntdTheme.html" class="sidebar-link">前言</a></li><li><a href="/notes/ForentEnd/React/ReactDnd.html" class="sidebar-link">ReactDnd</a></li><li><a href="/notes/ForentEnd/React/ReactNative.html" class="sidebar-link">ReactNative</a></li><li><a href="/notes/ForentEnd/React/ReactRedux.html" class="sidebar-link">ReactRedux 源码解析</a></li><li><a href="/notes/ForentEnd/React/ReactRouter.html" class="sidebar-link">React 路由</a></li><li><a href="/notes/ForentEnd/React/SSR.html" class="sidebar-link">SSR 服务端渲染</a></li><li><a href="/notes/ForentEnd/React/antd-cascade.html" class="sidebar-link">学习 antd 级联选择器</a></li><li><a href="/notes/ForentEnd/React/antd-modal.html" class="sidebar-link">学习 antd 弹窗</a></li><li><a href="/notes/ForentEnd/React/antd.html" class="sidebar-link">antd(React)问题整理</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-组件库搭建"><a href="#react-组件库搭建" class="header-anchor">#</a> React 组件库搭建</h1> <h2 id="demo地址"><a href="#demo地址" class="header-anchor">#</a> Demo地址</h2> <p><a href="https://github.com/18355166248/jiang-btp-commpo" target="_blank" rel="noopener noreferrer">jiang-btp-commpo<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="框架选择"><a href="#框架选择" class="header-anchor">#</a> 框架选择</h2> <table><thead><tr><th>名称</th> <th>版本</th> <th></th></tr></thead> <tbody><tr><td>我们选择 [dumi@2] 作为组件研发的静态站点框架</td> <td>v2</td> <td></td></tr> <tr><td>father</td> <td>v4</td> <td></td></tr> <tr><td>husky</td> <td>v8</td> <td></td></tr> <tr><td>jest</td> <td>v29</td> <td></td></tr> <tr><td>antd</td> <td>v4</td> <td></td></tr></tbody></table> <h2 id="初始化"><a href="#初始化" class="header-anchor">#</a> 初始化</h2> <p>看<a href="https://d.umijs.org/" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 初始化就行了</p> <h2 id="git-提交限制"><a href="#git-提交限制" class="header-anchor">#</a> git 提交限制</h2> <p>需要安装几个依赖</p> <div class="language-server line-numbers-mode"><pre class="language-text"><code>yarn add -D husky @commitlint/cli @commitlint/config-conventional lint-staged
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后我们就需要针对上面这些依赖做配置</p> <ul><li><p>根目录新增 .commitlintrc.js</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">extends</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'@commitlint/config-conventional'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>修改package.json</p></li></ul> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;commitlint&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;extends&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;@commitlint/config-conventional&quot;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;lint-staged&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;*.{js,jsx,less,md,json}&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;prettier --write&quot;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;*.ts?(x)&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;prettier --parser=typescript --write&quot;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><ul><li>配置 husky</li></ul> <p>这里参考 <a href="https://typicode.github.io/husky/#/?id=install" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 即可</p> <p>需要注意的是 在 .husky文件夹下的 commit-msg 和 pre-commit 文件里内容做下修改</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// .husky/commit-msg</span>
+#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env sh
+<span class="token punctuation">.</span> <span class="token string">&quot;$(dirname -- &quot;</span>$<span class="token number">0</span><span class="token string">&quot;)/_/husky.sh&quot;</span>
+
+npx commitlint <span class="token operator">--</span>edit <span class="token string">&quot;${1}&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// .husky/pre-commit</span>
+#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env sh
+<span class="token punctuation">.</span> <span class="token string">&quot;$(dirname -- &quot;</span>$<span class="token number">0</span><span class="token string">&quot;)/_/husky.sh&quot;</span>
+
+npx lint<span class="token operator">-</span>staged
+
+npm run test <span class="token comment">// 这里就是后面配置的测试命令 jest</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="dumi-文档配置-father-打包配置"><a href="#dumi-文档配置-father-打包配置" class="header-anchor">#</a> dumi 文档配置 &amp; father 打包配置</h2> <p>因为我们的组件库有些组件是基于 dumi 生成的, 所以需要配置下</p> <div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">// .dumirc.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'dumi'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> join <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token comment">// 配置线上路径</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span> <span class="token operator">?</span> <span class="token string">'/mi-design'</span> <span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  publicPath<span class="token operator">:</span> path <span class="token operator">+</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+  outputPath<span class="token operator">:</span> <span class="token string">'docs-dist'</span><span class="token punctuation">,</span> <span class="token comment">// 打包目录</span>
+  themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'mi-design'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  history<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'hash'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 路由模式</span>
+  favicons<span class="token operator">:</span> <span class="token punctuation">[</span>path <span class="token operator">+</span> <span class="token string">'/logo.svg'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  logo<span class="token operator">:</span> path <span class="token operator">+</span> <span class="token string">'/logo.svg'</span><span class="token punctuation">,</span>
+  alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'@'</span><span class="token operator">:</span> <span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// html 引入 css</span>
+  links<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> rel<span class="token operator">:</span> <span class="token string">'stylesheet'</span><span class="token punctuation">,</span> href<span class="token operator">:</span> path <span class="token operator">+</span> <span class="token string">'/common.css'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      rel<span class="token operator">:</span> <span class="token string">'stylesheet'</span><span class="token punctuation">,</span>
+      href<span class="token operator">:</span> path <span class="token operator">+</span> <span class="token string">'/tailwindCss.css'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// 组件代码分析目录</span>
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+    atomDirs<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'component'</span><span class="token punctuation">,</span> dir<span class="token operator">:</span> <span class="token string">'src/components/common'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  clickToComponent<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// antd 按需加载</span>
+  extraBabelPlugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'babel-plugin-import'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        libraryName<span class="token operator">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span>
+        libraryDirectory<span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span>
+        style<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br></div></div><div class="language-ts line-numbers-mode"><pre class="language-ts"><code><span class="token comment">// .fatherrc.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> defineConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'father'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// more father config: https://github.com/umijs/father/blob/master/docs/config.md</span>
+  esm<span class="token operator">:</span> <span class="token punctuation">{</span> output<span class="token operator">:</span> <span class="token string">'dist'</span><span class="token punctuation">,</span> ignores<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'**/Demo/**'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  extraBabelPlugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'babel-plugin-import'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        libraryName<span class="token operator">:</span> <span class="token string">'antd'</span><span class="token punctuation">,</span>
+        libraryDirectory<span class="token operator">:</span> <span class="token string">'es'</span><span class="token punctuation">,</span>
+        style<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="单元测试配置"><a href="#单元测试配置" class="header-anchor">#</a> 单元测试配置</h2> <p>我们使用 jest + @testing-library/react 针对组件做单元测试</p> <p>我们需要安装依赖</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>yarn add <span class="token operator">-</span><span class="token constant">D</span> jest @testing<span class="token operator">-</span>library<span class="token operator">/</span>react @types<span class="token operator">/</span>jest jest<span class="token operator">-</span>environment<span class="token operator">-</span>jsdom jest<span class="token operator">-</span>less<span class="token operator">-</span>loader ts<span class="token operator">-</span>jest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>对应的 jest 配置文档, 我们使用 jest --init 执行完做下修改</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">/*
+ * For a detailed explanation regarding each configuration property and type check, visit:
+ * https://jestjs.io/docs/configuration
+ */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// All imported modules in your tests should be mocked automatically</span>
+  <span class="token comment">// automock: false,</span>
+
+  <span class="token comment">// Stop running tests after `n` failures</span>
+  <span class="token comment">// bail: 0,</span>
+
+  <span class="token comment">// The directory where Jest should store its cached dependency information</span>
+  <span class="token comment">// cacheDirectory: &quot;/private/var/folders/6h/m_5kf5zj42l549s35gb8ldtr0000gn/T/jest_dx&quot;,</span>
+
+  <span class="token comment">// Automatically clear mock calls, instances, contexts and results before every test</span>
+  clearMocks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Indicates whether the coverage information should be collected while executing the test</span>
+  collectCoverage<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// An array of glob patterns indicating a set of files for which coverage information should be collected</span>
+  <span class="token comment">// collectCoverageFrom: undefined,</span>
+
+  <span class="token comment">// The directory where Jest should output its coverage files</span>
+  coverageDirectory<span class="token operator">:</span> <span class="token string">'coverage'</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// An array of regexp pattern strings used to skip coverage collection</span>
+  <span class="token comment">// coveragePathIgnorePatterns: [</span>
+  <span class="token comment">//   &quot;/node_modules/&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// Indicates which provider should be used to instrument code for coverage</span>
+  coverageProvider<span class="token operator">:</span> <span class="token string">'v8'</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// A list of reporter names that Jest uses when writing coverage reports</span>
+  <span class="token comment">// coverageReporters: [</span>
+  <span class="token comment">//   &quot;json&quot;,</span>
+  <span class="token comment">//   &quot;text&quot;,</span>
+  <span class="token comment">//   &quot;lcov&quot;,</span>
+  <span class="token comment">//   &quot;clover&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// An object that configures minimum threshold enforcement for coverage results</span>
+  <span class="token comment">// coverageThreshold: undefined,</span>
+
+  <span class="token comment">// A path to a custom dependency extractor</span>
+  <span class="token comment">// dependencyExtractor: undefined,</span>
+
+  <span class="token comment">// Make calling deprecated APIs throw helpful error messages</span>
+  <span class="token comment">// errorOnDeprecated: false,</span>
+
+  <span class="token comment">// The default configuration for fake timers</span>
+  <span class="token comment">// fakeTimers: {</span>
+  <span class="token comment">//   &quot;enableGlobally&quot;: false</span>
+  <span class="token comment">// },</span>
+
+  <span class="token comment">// Force coverage collection from ignored files using an array of glob patterns</span>
+  <span class="token comment">// forceCoverageMatch: [],</span>
+
+  <span class="token comment">// A path to a module which exports an async function that is triggered once before all test suites</span>
+  <span class="token comment">// globalSetup: undefined,</span>
+
+  <span class="token comment">// A path to a module which exports an async function that is triggered once after all test suites</span>
+  <span class="token comment">// globalTeardown: undefined,</span>
+
+  <span class="token comment">// A set of global variables that need to be available in all test environments</span>
+  <span class="token comment">// globals: {},</span>
+
+  <span class="token comment">// The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.</span>
+  <span class="token comment">// maxWorkers: &quot;50%&quot;,</span>
+
+  <span class="token comment">// An array of directory names to be searched recursively up from the requiring module's location</span>
+  <span class="token comment">// moduleDirectories: [</span>
+  <span class="token comment">//   &quot;node_modules&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// An array of file extensions your modules use</span>
+  <span class="token comment">// moduleFileExtensions: [</span>
+  <span class="token comment">//   &quot;js&quot;,</span>
+  <span class="token comment">//   &quot;mjs&quot;,</span>
+  <span class="token comment">//   &quot;cjs&quot;,</span>
+  <span class="token comment">//   &quot;jsx&quot;,</span>
+  <span class="token comment">//   &quot;ts&quot;,</span>
+  <span class="token comment">//   &quot;tsx&quot;,</span>
+  <span class="token comment">//   &quot;json&quot;,</span>
+  <span class="token comment">//   &quot;node&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module</span>
+  moduleNameMapper<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">'lodash-es'</span><span class="token operator">:</span> <span class="token string">'lodash'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader</span>
+  <span class="token comment">// modulePathIgnorePatterns: [],</span>
+
+  <span class="token comment">// Activates notifications for test results</span>
+  <span class="token comment">// notify: false,</span>
+
+  <span class="token comment">// An enum that specifies notification mode. Requires { notify: true }</span>
+  <span class="token comment">// notifyMode: &quot;failure-change&quot;,</span>
+
+  <span class="token comment">// A preset that is used as a base for Jest's configuration</span>
+  <span class="token comment">// preset: undefined,</span>
+
+  <span class="token comment">// Run tests from one or more projects</span>
+  <span class="token comment">// projects: undefined,</span>
+
+  <span class="token comment">// Use this configuration option to add custom reporters to Jest</span>
+  <span class="token comment">// reporters: undefined,</span>
+
+  <span class="token comment">// Automatically reset mock state before every test</span>
+  <span class="token comment">// resetMocks: false,</span>
+
+  <span class="token comment">// Reset the module registry before running each individual test</span>
+  <span class="token comment">// resetModules: false,</span>
+
+  <span class="token comment">// A path to a custom resolver</span>
+  <span class="token comment">// resolver: undefined,</span>
+
+  <span class="token comment">// Automatically restore mock state and implementation before every test</span>
+  <span class="token comment">// restoreMocks: false,</span>
+
+  <span class="token comment">// The root directory that Jest should scan for tests and modules within</span>
+  <span class="token comment">// rootDir: undefined,</span>
+
+  <span class="token comment">// A list of paths to directories that Jest should use to search for files in</span>
+  <span class="token comment">// roots: [</span>
+  <span class="token comment">//   &quot;&lt;rootDir&gt;&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// Allows you to use a custom runner instead of Jest's default test runner</span>
+  <span class="token comment">// runner: &quot;jest-runner&quot;,</span>
+
+  <span class="token comment">// The paths to modules that run some code to configure or set up the testing environment before each test</span>
+  <span class="token comment">// setupFiles: [],</span>
+
+  <span class="token comment">// A list of paths to modules that run some code to configure or set up the testing framework before each test</span>
+  <span class="token comment">// setupFilesAfterEnv: [],</span>
+
+  <span class="token comment">// The number of seconds after which a test is considered as slow and reported as such in the results.</span>
+  <span class="token comment">// slowTestThreshold: 5,</span>
+
+  <span class="token comment">// A list of paths to snapshot serializer modules Jest should use for snapshot testing</span>
+  <span class="token comment">// snapshotSerializers: [],</span>
+
+  <span class="token comment">// The test environment that will be used for testing</span>
+  testEnvironment<span class="token operator">:</span> <span class="token string">'jsdom'</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Options that will be passed to the testEnvironment</span>
+  <span class="token comment">// testEnvironmentOptions: {},</span>
+
+  <span class="token comment">// Adds a location field to test results</span>
+  <span class="token comment">// testLocationInResults: false,</span>
+
+  <span class="token comment">// The glob patterns Jest uses to detect test files</span>
+  <span class="token comment">// testMatch: [</span>
+  <span class="token comment">//   &quot;**/__tests__/**/*.[jt]s?(x)&quot;,</span>
+  <span class="token comment">//   &quot;**/?(*.)+(spec|test).[tj]s?(x)&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// An array of regexp pattern strings that are matched against all test paths, matched tests are skipped</span>
+  <span class="token comment">// testPathIgnorePatterns: [</span>
+  <span class="token comment">//   &quot;/node_modules/&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// The regexp pattern or array of patterns that Jest uses to detect test files</span>
+  <span class="token comment">// testRegex: [],</span>
+
+  <span class="token comment">// This option allows the use of a custom results processor</span>
+  <span class="token comment">// testResultsProcessor: undefined,</span>
+
+  <span class="token comment">// This option allows use of a custom test runner</span>
+  <span class="token comment">// testRunner: &quot;jest-circus/runner&quot;,</span>
+
+  <span class="token comment">// A map from regular expressions to paths to transformers</span>
+  extensionsToTreatAsEsm<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.ts'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// A map from regular expressions to paths to transformers</span>
+  transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'^.+\\.tsx?$'</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'ts-jest'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        useESM<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'\\.(less|css)$'</span><span class="token operator">:</span> <span class="token string">'jest-less-loader'</span><span class="token punctuation">,</span> <span class="token comment">// 支持less</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation</span>
+  <span class="token comment">// transformIgnorePatterns: [</span>
+  <span class="token comment">//   &quot;/node_modules/&quot;,</span>
+  <span class="token comment">//   &quot;\\.pnp\\.[^\\/]+$&quot;</span>
+  <span class="token comment">// ],</span>
+
+  <span class="token comment">// An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them</span>
+  <span class="token comment">// unmockedModulePathPatterns: undefined,</span>
+
+  <span class="token comment">// Indicates whether each individual test should be reported during the run</span>
+  <span class="token comment">// verbose: undefined,</span>
+
+  <span class="token comment">// An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode</span>
+  <span class="token comment">// watchPathIgnorePatterns: [],</span>
+
+  <span class="token comment">// Whether to use watchman for file crawling</span>
+  <span class="token comment">// watchman: true,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/14/2023, 11:23:22 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/ForentEnd/React/AntdTheme.html" class="prev">
+        改变 antd 主题色(旧)
+      </a></span> <span class="next"><a href="/notes/ForentEnd/React/Fiber.html">
+        完全理解 Fiber
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.9ae398c0.js" defer></script><script src="/assets/js/2.572ab5ff.js" defer></script><script src="/assets/js/317.75781946.js" defer></script>
+  </body>
+</html>
