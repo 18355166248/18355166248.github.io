@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[51],{365:function(n,t,e){"use strict";e.r(t);var r={props:{list:Array}},s=e(14),l=Object(s.a)(r,(function(){var n=this,t=n._self._c;return t("ul",n._l(n.list,(function(e,r){return t("li",{key:r},[n._v(n._s(e.name))])})),0)}),[],!1,null,"2872ffe6",null);t.default=l.exports}}]);
